@@ -1,8 +1,13 @@
 // Prompt matrix code
 function sheetReport(){
+
+  var matrixList = apiGetList_('/matrizes')
+  var matrixText = ''
+  
+  for (var item in matrixList) matrixText += '\n [' + matrixList[item][1] + '] ' + matrixList[item][2]
   
   var ui = SpreadsheetApp.getUi()
-  var response = ui.prompt('Relatório IDwall', 'Digite o código da Matriz:', ui.ButtonSet.OK)
+  var response = ui.prompt('Relatório IDwall', 'Digite o código da Matriz:\n' + matrixText, ui.ButtonSet.OK)
   
   if (response.getSelectedButton() != ui.Button.OK){
     ui.alert('Você precisa fornecer o código da Matriz para continuar.')
@@ -61,7 +66,7 @@ function sendReports_() {
   var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet()
   var dataRange = sheet.getRange(1, 1, sheet.getLastRow(), sheet.getLastColumn())
   var dataValues = dataRange.getValues()
-  var matrix = SpreadsheetApp.getActiveSheet().getName()
+  var matrix = sheet.getName()
   
   // Loop rows
   for (var r = 1; r < dataValues.length; r++) {    
