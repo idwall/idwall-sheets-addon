@@ -123,3 +123,13 @@ function resultToArray_(result, header){
 function transpose_(a) {
   return Object.keys(a[0]).map(function (c) { return a.map(function (r) { return r[c] }) })
 }
+
+/**
+ * Show error message
+ */
+function showError_(message, title) {
+  if (title) SpreadsheetApp.getActiveSpreadsheet().toast(message, title)
+  else SpreadsheetApp.getActiveSpreadsheet().toast(message)
+}
+
+

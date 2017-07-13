@@ -24,7 +24,11 @@ function apiPost_(endpoint, payload){
     headers: headers,
   });
   
-  return JSON.parse(response.getContentText())
+  var result = JSON.parse(response.getContentText())  
+ 
+  if (result.status_code != 200) showError_(JSON.stringify(result), "POST error")
+ 
+  return result
 }
 
 /**
@@ -52,8 +56,12 @@ function apiGet_(endpoint){
     headers: headers,
   });
   
-  return JSON.parse(response.getContentText())
-
+  var result = JSON.parse(response.getContentText())  
+ 
+  if (result.status_code != 200) showError_(JSON.stringify(result), "GET error")
+ 
+  return result
+  
 }
 
 /**

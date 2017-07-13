@@ -27,12 +27,7 @@ function newReport(matrix) {
   // Get matrix parameters
   var details = apiGet_('/matrizes/' + matrix)
   
-  if (details.status_code != 200) {
-    
-    var ui = SpreadsheetApp.getUi()
-    ui.alert(details)
-    
-  } else {
+  if (details.status_code == 200) {
     
     var detailsObj = details.result.parametros
     
