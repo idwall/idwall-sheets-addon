@@ -5,7 +5,7 @@
  * @param {boolean} header Include header row
  * @customfunction
  */
-function PARSEJSONLIST(json_string, header){
+function IDWALL_PARSEJSONLIST(json_string, header){
   
   var items = JSON.parse(json_string)
   var rows = []

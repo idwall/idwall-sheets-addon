@@ -5,7 +5,7 @@
  * @param {boolean} header Inclui um cabeçalho no retorno.
  * @customfunction
  */
-function IDW_DETALHARRELATORIO(numero_do_relatorio, header) {
+function IDWALL_RELATORIOSDETALHES(numero_do_relatorio, header) {
 
   if (!numero_do_relatorio) throw "O número do Relatório deve ser informado."
   
@@ -20,7 +20,7 @@ function IDW_DETALHARRELATORIO(numero_do_relatorio, header) {
  * @param {boolean} header Inclui um cabeçalho no retorno.
  * @customfunction
  */
-function IDW_VALIDACOESRELATORIO(numero_do_relatorio, header) {
+function IDWALL_RELATORIOSVALIDACOES(numero_do_relatorio, header) {
 
   if (!numero_do_relatorio) throw "O número do Relatório deve ser informado."
   
@@ -35,7 +35,7 @@ function IDW_VALIDACOESRELATORIO(numero_do_relatorio, header) {
  * @param {boolean} header Inclui um cabeçalho no retorno.
  * @customfunction
  */
-function IDW_DADOSRELATORIO(numero_do_relatorio, header) {
+function IDWALL_RELATORIOSDADOS(numero_do_relatorio, header) {
 
   if (!numero_do_relatorio) throw "O número do Relatório deve ser informado."
   
@@ -50,7 +50,7 @@ function IDW_DADOSRELATORIO(numero_do_relatorio, header) {
  * @param {boolean} header Inclui um cabeçalho no retorno.
  * @customfunction
  */
-function IDW_PARAMETROSRELATORIO(numero_do_relatorio, header) {
+function IDWALL_RELATORIOSPARAMETROS(numero_do_relatorio, header) {
 
   if (!numero_do_relatorio) throw "O número do Relatório deve ser informado."
   
@@ -65,7 +65,7 @@ function IDW_PARAMETROSRELATORIO(numero_do_relatorio, header) {
  * @param {boolean} header Inclui um cabeçalho no retorno.
  * @customfunction
  */
-function IDW_CONSULTASRELATORIO(numero_do_relatorio, header) {
+function IDWALL_RELATORIOSCONSULTAS(numero_do_relatorio, header) {
 
   if (!numero_do_relatorio) throw "O número do Relatório deve ser informado."
   
@@ -81,7 +81,7 @@ function IDW_CONSULTASRELATORIO(numero_do_relatorio, header) {
  * @param {boolean} header Inclui um cabeçalho no retorno.
  * @customfunction
  */
-function IDW_LISTARRELATORIOS(page, rows, header) {
+function IDWALL_RELATORIOSLISTA(page, rows, header) {
 
   if (!page) page = 1
   if (!rows) rows = 25
@@ -100,7 +100,7 @@ function IDW_LISTARRELATORIOS(page, rows, header) {
  * @param {string} busca Parte do nome ou CPF para busca.
  * @customfunction
  */
-function IDW_LISTARPESSOAS(page, rows, header, busca) {
+function IDWALL_PESSOASLISTA(page, rows, header, busca) {
   
   if (!page) page = 1
   if (!rows) rows = 25
@@ -122,7 +122,7 @@ function IDW_LISTARPESSOAS(page, rows, header, busca) {
  * @param {boolean} header Inclui um cabeçalho no retorno.
  * @customfunction
  */
-function IDW_DETALHARPESSOA(cpf, page, rows, header) {
+function IDWALL_PESSOASDETALHES(cpf, page, rows, header) {
   
   if (!page) page = 1
   if (!rows) rows = 25
@@ -141,7 +141,7 @@ function IDW_DETALHARPESSOA(cpf, page, rows, header) {
  * @param {string} busca Parte do nome ou CNPJ para busca.
  * @customfunction
  */
-function IDW_LISTAREMPRESAS(page, rows, header, busca) {
+function IDWALL_EMPRESASLISTA(page, rows, header, busca) {
   
   if (!page) page = 1
   if (!rows) rows = 25
@@ -163,7 +163,7 @@ function IDW_LISTAREMPRESAS(page, rows, header, busca) {
  * @param {boolean} header Inclui um cabeçalho no retorno.
  * @customfunction
  */
-function IDW_DETALHAREMPRESA(cnpj, page, rows, header) {
+function IDWALL_EMPRESASDETALHES(cnpj, page, rows, header) {
   
   if (!page) page = 1
   if (!rows) rows = 25
@@ -179,7 +179,7 @@ function IDW_DETALHAREMPRESA(cnpj, page, rows, header) {
  * @param {boolean} header Inclui um cabeçalho no retorno,
  * @customfunction
  */
-function IDW_LISTARMATRIZES(header) {
+function IDWALL_MATRIZESLISTA(header) {
   return apiGetList_('/matrizes', header) 
 }
 
@@ -190,7 +190,7 @@ function IDW_LISTARMATRIZES(header) {
  * @param {boolean} header Inclui um cabeçalho no retorno.
  * @customfunction
  */
-function IDW_DETALHARMATRIZ(codigo_da_matriz, header) {
+function IDWALL_MATRIZESDETALHES(codigo_da_matriz, header) {
 
   if (!codigo_da_matriz) throw "O código da matriz deve ser informado."
   
@@ -204,7 +204,7 @@ function IDW_DETALHARMATRIZ(codigo_da_matriz, header) {
  * @param {boolean} header Inclui um cabeçalho no retorno.
  * @customfunction
  */
-function IDW_USUARIO(header) {
+function IDWALL_USUARIO(header) {
   
   return apiGetDetails_('/usuario', header)
   
