@@ -1,3 +1,7 @@
+function onInstall(e) {
+  onOpen(e);
+}
+
 function onOpen(e) {
   SpreadsheetApp.getUi()
     .createMenu('IDwall')
